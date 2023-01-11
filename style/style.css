@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 0;
+  padding: 0;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg") center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+body .result {
+  grid-area: 1/2/2/3;
+  margin: 1vw;
+  background-color: #65657b;
+}
+body .result #result {
+  color: #f8f4e5;
+  grid-area: 1/2/2/3;
+  margin-top: 5%;
+  margin-left: 5%;
+  height: 90%;
+  width: 90%;
+  background-color: #2A293E;
+}
+body .global_form {
+  grid-area: 1/1/2/2;
+  margin: 1vw;
+  background-color: #65657b;
+  display: grid;
+}
+body .input-container {
+  height: 10vh;
+  position: relative;
+  width: 100%;
+  margin-top: 2vh;
+}
+body .input-container .placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+  margin-left: 2vw;
+}
+body .input-container textarea {
+  display: block;
+  width: 90%;
+  font-size: 14pt;
+  line-height: 28pt;
+  font-family: "Fjalla One";
+  margin-bottom: 28pt;
+  border: none;
+  border-bottom: 5px solid rgb(0, 0, 0);
+  background: #f8f4e5;
+  min-width: 250px;
+  padding-left: 5px;
+  margin-left: 2vw;
+  height: 10vh;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+body .input-container textarea:not(:-moz-placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  background-color: #f8f4e5;
+  border-radius: 10%;
+}
+body .input-container textarea:not(:-ms-input-placeholder) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  background-color: #f8f4e5;
+  border-radius: 10%;
+}
+body .input-container textarea:focus ~ .placeholder, body .input-container textarea:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  background-color: #f8f4e5;
+  border-radius: 10%;
+}
+body .input-container textarea:not(:-moz-placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+body .input-container textarea:not(:-ms-input-placeholder) ~ .placeholder {
+  color: #808097;
+}
+body .input-container textarea:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+body .input-container textarea:focus ~ .placeholder {
+  color: #dc2f55;
+}
+body .input-container textarea:not(:-moz-placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+body .input-container textarea:not(:-ms-input-placeholder) ~ .cut {
+  transform: translateY(8px);
+}
+body .input-container textarea:focus ~ .cut, body .input-container textarea:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+body button {
+  height: 7vh;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  line-height: 28pt;
+  padding: 0 20px;
+  background: #ffa580;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  outline: none;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 3px 3px 1px 1px #95a4ff, 3px 3px 1px 2px rgb(0, 0, 0);
+}
+body button:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+::-moz-selection {
+  background: #ffc8ff;
+}
+
+::selection {
+  background: #ffc8ff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border-bottom: 5px solid #95a4ff;
+  -webkit-text-fill-color: #2A293E;
+  -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}/*# sourceMappingURL=style.css.map */
