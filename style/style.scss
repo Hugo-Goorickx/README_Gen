@@ -23,15 +23,26 @@ body
         // height: 75vh;
         margin: 1vw;
         background-color: #65657b;
-        #result
+        .global_result
         {
-            color: #f8f4e5;
             grid-area: 1 / 2 / 2 / 3;
-            margin-top: 5%;
-            margin-left: 5%;
-            height: 90%;
-            width: 90%;
+            margin-top: 2%;
+            margin-left: 2%;
+            height: 96%;
+            width: 96%;
             background-color: #2A293E;
+            border-radius: 25px;
+            #result
+            {
+                border-radius: 25px;
+                margin-top: 1%;
+                color: #f8f4e5;
+                margin-left: 1%;
+                height: 96%;
+                width: 96%;
+                background-color: #2A293E;
+                border: 5px black solid;
+            }
         }
     }
     margin: 0;

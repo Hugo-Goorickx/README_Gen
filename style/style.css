@@ -17,14 +17,24 @@ body .result {
   margin: 1vw;
   background-color: #65657b;
 }
-body .result #result {
-  color: #f8f4e5;
+body .result .global_result {
   grid-area: 1/2/2/3;
-  margin-top: 5%;
-  margin-left: 5%;
-  height: 90%;
-  width: 90%;
+  margin-top: 2%;
+  margin-left: 2%;
+  height: 96%;
+  width: 96%;
   background-color: #2A293E;
+  border-radius: 25px;
+}
+body .result .global_result #result {
+  border-radius: 25px;
+  margin-top: 1%;
+  color: #f8f4e5;
+  margin-left: 1%;
+  height: 96%;
+  width: 96%;
+  background-color: #2A293E;
+  border: 5px black solid;
 }
 body .global_form {
   grid-area: 1/1/2/2;
