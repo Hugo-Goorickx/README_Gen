@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
 body {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -36,13 +36,37 @@ body .result .global_result #result {
   background-color: #2A293E;
   border: 5px black solid;
 }
+body .result_html {
+  grid-area: 1/3/2/4;
+  margin: 1vw;
+  background-color: #65657b;
+}
+body .result_html .global_result_html {
+  grid-area: 1/3/2/4;
+  margin-top: 2%;
+  margin-left: 2%;
+  height: 96%;
+  width: 96%;
+  background-color: #2A293E;
+  border-radius: 25px;
+}
+body .result_html .global_result_html #result_html {
+  border-radius: 25px;
+  margin-top: 1%;
+  color: #f8f4e5;
+  margin-left: 1%;
+  height: 96%;
+  width: 96%;
+  background-color: #2A293E;
+  border: 5px black solid;
+}
 body .global_form {
   grid-area: 1/1/2/2;
   margin: 1vw;
   background-color: #65657b;
   display: grid;
 }
-body .balise {
+body .balise, body .image {
   display: block;
   width: 90%;
   font-size: 14pt;
@@ -58,14 +82,14 @@ body .balise {
   outline: none;
   color: rgb(0, 0, 0);
 }
-body .balise .params_badge {
+body .balise .params_badge, body .image .params_badge {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: align;
 }
-body .balise .placeholder {
+body .balise .placeholder, body .image .placeholder {
   color: #65657b;
   font-family: sans-serif;
   left: 20px;
@@ -76,7 +100,7 @@ body .balise .placeholder {
   transition: transform 200ms, color 200ms;
   top: 20px;
 }
-body .balise .result_badge {
+body .balise .result_badge, body .image .result_badge {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -93,7 +117,7 @@ body .balise .result_badge {
   outline: none;
   color: rgb(0, 0, 0);
 }
-body .balise input {
+body .balise input, body .image input {
   display: block;
   width: 20%;
   font-size: 14pt;
@@ -108,40 +132,40 @@ body .balise input {
   outline: none;
   color: rgb(0, 0, 0);
 }
-body .balise input:not(:-moz-placeholder-shown) ~ .placeholder {
+body .balise input:not(:-moz-placeholder-shown) ~ .placeholder, body .image input:not(:-moz-placeholder-shown) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
   background-color: #f8f4e5;
   border-radius: 10%;
 }
-body .balise input:not(:-ms-input-placeholder) ~ .placeholder {
+body .balise input:not(:-ms-input-placeholder) ~ .placeholder, body .image input:not(:-ms-input-placeholder) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
   background-color: #f8f4e5;
   border-radius: 10%;
 }
-body .balise input:focus ~ .placeholder, body .balise input:not(:placeholder-shown) ~ .placeholder {
+body .balise input:focus ~ .placeholder, body .balise input:not(:placeholder-shown) ~ .placeholder, body .image input:focus ~ .placeholder, body .image input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
   background-color: #f8f4e5;
   border-radius: 10%;
 }
-body .balise input:not(:-moz-placeholder-shown) ~ .placeholder {
+body .balise input:not(:-moz-placeholder-shown) ~ .placeholder, body .image input:not(:-moz-placeholder-shown) ~ .placeholder {
   color: #808097;
 }
-body .balise input:not(:-ms-input-placeholder) ~ .placeholder {
+body .balise input:not(:-ms-input-placeholder) ~ .placeholder, body .image input:not(:-ms-input-placeholder) ~ .placeholder {
   color: #808097;
 }
-body .balise input:not(:placeholder-shown) ~ .placeholder {
+body .balise input:not(:placeholder-shown) ~ .placeholder, body .image input:not(:placeholder-shown) ~ .placeholder {
   color: #808097;
 }
-body .balise input:focus ~ .placeholder {
+body .balise input:focus ~ .placeholder, body .image input:focus ~ .placeholder {
   color: #dc2f55;
 }
-body .balise input:not(:-moz-placeholder-shown) ~ .cut {
+body .balise input:not(:-moz-placeholder-shown) ~ .cut, body .image input:not(:-moz-placeholder-shown) ~ .cut {
   transform: translateY(8px);
 }
-body .balise input:not(:-ms-input-placeholder) ~ .cut {
+body .balise input:not(:-ms-input-placeholder) ~ .cut, body .image input:not(:-ms-input-placeholder) ~ .cut {
   transform: translateY(8px);
 }
-body .balise input:focus ~ .cut, body .balise input:not(:placeholder-shown) ~ .cut {
+body .balise input:focus ~ .cut, body .balise input:not(:placeholder-shown) ~ .cut, body .image input:focus ~ .cut, body .image input:not(:placeholder-shown) ~ .cut {
   transform: translateY(8px);
 }
 body .input-container {

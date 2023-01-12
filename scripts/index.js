@@ -1,37 +1,87 @@
+import { } from 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
 let url_badges = [];
+let url_imgs = [];
+function gen_imgs()
+{
+    url_imgs=[];
+
+    let status =true,
+        params_badges = [...document.getElementsByClassName('param_img')],
+        imgs_src = [...document.getElementsByClassName('img_src')],
+        img_src = [];
+    if (!imgs_src[imgs_src.length - 1].value)
+    {
+        status = false;
+        imgs_src.pop();
+    }
+    for (let x = 0; x < imgs_src.length; x++)
+    {
+        img_src.push(imgs_src[x].value);
+        url_imgs.push(imgs_src[x].value);
+        params_badges[x].getElementsByTagName('img')[0].src = imgs_src[x].value;
+        params_badges[x].getElementsByTagName('img')[0].style.display = 'block';
+    }
+    if (status)
+    {
+        document.getElementById('srcs').innerHTML += `<div class="param_img">
+                                                            <input type="text" class='img_src' id="label" name="label" placeholder=" ">
+                                                            <img src='' alt="badge" style="display: none;">
+                                                        </div>`;
+    }
+    for (let index = 0; index < img_src.length; index++)
+            document.getElementsByClassName('img_src')[index].value = img_src[index];
+}
 
 function gen_badge()
 {
-    let labels = document.getElementsByClassName('label');
-    let label = [], message = [], color = [];
-    let Messages = document.getElementsByClassName('Message');
-    let colors = document.getElementsByClassName('color');
-    let params_badges = document.getElementsByClassName('params_badge');
-    for (let x = 0; x < params_badges.length; x++)
+    url_badges=[];
+    let status =true,
+        labels = [...document.getElementsByClassName('label')],
+        Messages = [...document.getElementsByClassName('Message')],
+        colors = [...document.getElementsByClassName('color')],
+        style_badges = [...document.getElementsByClassName('style_badge')],
+        params_badges = [...document.getElementsByClassName('params_badge')],
+        label = [],
+        message = [],
+        color = [],
+        style_badge = [];
+    if (!labels[labels.length - 1].value)
+    {
+        status = false;
+        labels.pop();
+    }
+    for (let x = 0; x < labels.length; x++)
     {
         label.push(labels[x].value);
         message.push(Messages[x].value);
         color.push(colors[x].value);
-        url_badges.push(`https://img.shields.io/static/v1?label=${labels[x].value}&message=${Messages[x].value}&color=${colors[x].value.substr(1,6)}`);
+        style_badge.push(style_badges[x].value);
+        url_badges.push(`https://img.shields.io/static/v1?label=${labels[x].value}&message=${Messages[x].value}&color=${colors[x].value.substr(1,6)}&style=${style_badges[x].value}`);
         params_badges[x].getElementsByTagName('img')[0].src = url_badges[url_badges.length - 1];
-        labels[x].value = label;
-        Messages[x].value = message;
-        color[x].value = color;
+        params_badges[x].getElementsByTagName('img')[0].style.display = 'block';
     }
-    document.getElementById('badges').innerHTML += `<div class="params_badge">
-                                                        <input type="text" class='label' id="label" name="label" placeholder=" ">
-                                                        <input type="text" class='Message' id="Message" name="Message" placeholder=" ">
-                                                        <input type="color" class='color' id="color" name="color" placeholder=" ">
-                                                        <img src='' alt="badge">
-                                                    </div>`;
+    if (status)
+    {
+        document.getElementById('badges').innerHTML += `<div class="params_badge">
+                                                            <input type="text" class='label' id="label" name="label" placeholder=" ">
+                                                            <input type="text" class='Message' id="Message" name="Message" placeholder=" ">
+                                                            <input type="color" class='color' id="color" name="color" placeholder=" ">
+                                                            <select id="style" name="style">
+                                                                <option value="plastic">plastic</option>
+                                                                <option value="flat">flat</option>
+                                                                <option value="flat-square">flat-square</option>
+                                                                <option value="for-the-badge">for-the-badge</option>
+                                                                <option value="social">social</option>
+                                                            </select>
+                                                            <img src='' alt="badge" style="display: none;">
+                                                        </div>`;
+    }
     for (let index = 0; index < labels.length; index++)
     {
-        if (label[index])
-        {
-            labels[index].value = label[index];
-            Messages[index].value = message[index];
-            colors[index].value = color[index];
-        }
+            document.getElementsByClassName('label')[index].value = label[index];
+            document.getElementsByClassName('Message')[index].value = message[index];
+            document.getElementsByClassName('color')[index].value = color[index];
+            document.getElementsByClassName('style_badge')[index].value = style_badge[index];
     }
 }
 
@@ -39,10 +89,23 @@ function create_out()
 {
     let out = ``;
     url_badges.forEach(elem => out += `[![badge](${elem})](https://shields.io)`);
-    document.getElementById('result').value = `
+    let imgs = ``;
+    url_imgs.forEach(elem => imgs += `[![img](${elem})](https://shields.io)`);
+    let tmp = `
 # ${document.getElementById('project_name').value}
-  ${out}
-  ${document.getElementById('project_desc').value}
+<p align="center">
+  <a href="#en-premier">En premier</a> •
+  <a href="#comment-l-utiliser">Comment l'utiliser</a> •
+  <a href="#fabrique-avec">Fabriqué avec</a> •
+  <a href="#auteurs">Auteurs</a> •
+  <a href="#notes-de-projets">Notes de projets</a> 
+</p>
+
+${imgs}
+
+${document.getElementById('project_desc').value}
+
+${out}
 ## En premier
 ### Pre requis
   ${document.getElementById('requis').value}
@@ -50,12 +113,24 @@ function create_out()
   ${"```bash"}
   ${document.getElementById('instruct_install').value}
   ${"```"}
-## Comment l'utiliser
+## Comment l utiliser
   ${document.getElementById('how_to_use').value}
-## Fabriqué avec
+## Fabrique avec
   ${document.getElementById('log_used').value}
 ## Auteurs
   ${document.getElementById('made_by').value}
 ## Notes de projets
   ${document.getElementById('project_notes').value}`;
+
+
+  document.getElementById('result').value = tmp;
+  document.getElementById('result_html').innerHTML = marked.parse(tmp);
+
 }
+
+document.getElementById('create_out').addEventListener("click", function () {create_out();});
+document.getElementById('gen_badge').addEventListener("click", function () {gen_badge();});
+document.getElementById('gen_imgs').addEventListener("click", function () {gen_imgs()});
+document.getElementById('result').addEventListener("keydown", function () {
+    document.getElementById('result_html').innerHTML = marked.parse(document.getElementById('result').value);
+})
