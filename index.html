@@ -9,12 +9,23 @@
     </head>
     <body>
         <div class="global_form">
-            <form>
+            <div>
                 <div class="input-container">
                     <textarea type="text" size="50" id="project_name" name="project_name" placeholder=" "></textarea>
                     <label class="placeholder" for="project_name">Titre du projet</label>
                 </div>
-
+                <div class="balise">
+                    <h2>Balises:</h2>
+                    <div id="badges">
+                        <div class="params_badge">
+                            <input type="text" class='label' id="label" name="label" placeholder=" ">
+                            <input type="text" class='Message' id="Message" name="Message" placeholder=" ">
+                            <input type="color" class='color' id="color" name="color" placeholder=" ">
+                            <img src='' alt="badge">
+                        </div>
+                    </div>
+                    <button onclick="gen_badge()">generator badge</button>
+                </div>
                 <div class="input-container">
                     <textarea type="text" size="50" id="project_desc" name="project_desc" placeholder=" "></textarea>
                     <label class="placeholder" for="project_desc">Description du projet</label>
@@ -49,7 +60,7 @@
                     <textarea type="text" size="50" id="project_notes" name="project_notes" placeholder=" "></textarea>
                     <label class="placeholder" for="project_notes">Notes de projet</label>
                 </div>
-            </form>
+            </div>
             <button onclick="create_out()">Resultat</button>
         </div>
         <div class="result">
@@ -58,6 +69,9 @@
             </div>
         </div>
     </body>
+    <script>
+        
+    </script>
     <script src="./scripts/index.js"></script>
 </html>
 

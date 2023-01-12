@@ -17,5 +17,8 @@ Sans oublier VS Code
 ## Auteurs
 Hugo Goorickx
 ## Notes de projets
+Voici la version 0.2 du projet.
+Il sera ameliore, notamment avec l'ajout d'une photo en description pour augmenter la lecture rapide du README. Le CSS sera agremente dans les jours a venir
+
 Voici la version 0.1 du projet.
-Il sera ameliore, notamment avec l'ajout d'une photo en description et de balises pour augmenter la lecture rapide du README
+Ajout de badges et corrections de bugs mineurs

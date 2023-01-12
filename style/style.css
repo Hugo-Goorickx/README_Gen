@@ -42,6 +42,108 @@ body .global_form {
   background-color: #65657b;
   display: grid;
 }
+body .balise {
+  display: block;
+  width: 90%;
+  font-size: 14pt;
+  line-height: 28pt;
+  font-family: "Fjalla One";
+  margin-bottom: 28pt;
+  border: none;
+  border-bottom: 5px solid rgb(0, 0, 0);
+  background: wheat;
+  min-width: 250px;
+  padding-left: 5px;
+  margin-left: 2vw;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+body .balise .params_badge {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: align;
+}
+body .balise .placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+body .balise .result_badge {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  font-size: 14pt;
+  line-height: 28pt;
+  font-family: "Fjalla One";
+  margin-bottom: 28pt;
+  border: none;
+  background: #f8f4e5;
+  min-width: 50px;
+  background: wheat;
+  margin-left: 2vw;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+body .balise input {
+  display: block;
+  width: 20%;
+  font-size: 14pt;
+  line-height: 28pt;
+  font-family: "Fjalla One";
+  margin-bottom: 28pt;
+  border: none;
+  border-bottom: 5px solid rgb(0, 0, 0);
+  background: #f8f4e5;
+  min-width: 20px;
+  margin-left: 2vw;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+body .balise input:not(:-moz-placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  background-color: #f8f4e5;
+  border-radius: 10%;
+}
+body .balise input:not(:-ms-input-placeholder) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  background-color: #f8f4e5;
+  border-radius: 10%;
+}
+body .balise input:focus ~ .placeholder, body .balise input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  background-color: #f8f4e5;
+  border-radius: 10%;
+}
+body .balise input:not(:-moz-placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+body .balise input:not(:-ms-input-placeholder) ~ .placeholder {
+  color: #808097;
+}
+body .balise input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+body .balise input:focus ~ .placeholder {
+  color: #dc2f55;
+}
+body .balise input:not(:-moz-placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+body .balise input:not(:-ms-input-placeholder) ~ .cut {
+  transform: translateY(8px);
+}
+body .balise input:focus ~ .cut, body .balise input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
 body .input-container {
   height: 10vh;
   position: relative;
