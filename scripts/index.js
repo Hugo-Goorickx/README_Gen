@@ -1,6 +1,7 @@
 import { } from 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
 let url_badges = [];
 let url_imgs = [];
+
 function gen_imgs()
 {
     url_imgs=[];
@@ -66,7 +67,8 @@ function gen_badge()
                                                             <input type="text" class='label' id="label" name="label" placeholder=" ">
                                                             <input type="text" class='Message' id="Message" name="Message" placeholder=" ">
                                                             <input type="color" class='color' id="color" name="color" placeholder=" ">
-                                                            <select id="style" name="style">
+                                                            <label for="style">Style</label>
+                                                            <select class="style_badge" name="style">
                                                                 <option value="plastic">plastic</option>
                                                                 <option value="flat">flat</option>
                                                                 <option value="flat-square">flat-square</option>
@@ -92,7 +94,7 @@ function create_out()
     let imgs = ``;
     url_imgs.forEach(elem => imgs += `[![img](${elem})](https://shields.io)`);
     let tmp = `
-# ${document.getElementById('project_name').value}
+# ${document.getElementById('input1').value}
 <p align="center">
   <a href="#en-premier">En premier</a> •
   <a href="#comment-l-utiliser">Comment l'utiliser</a> •
@@ -103,26 +105,24 @@ function create_out()
 
 ${imgs}
 
-${document.getElementById('project_desc').value}
+${document.getElementById('input2').value}
 
 ${out}
 ## En premier
 ### Pre requis
-  ${document.getElementById('requis').value}
+  ${document.getElementById('input3').value}
 ### Installation
   ${"```bash"}
-  ${document.getElementById('instruct_install').value}
+  ${document.getElementById('input4').value}
   ${"```"}
 ## Comment l utiliser
-  ${document.getElementById('how_to_use').value}
+  ${document.getElementById('input5').value}
 ## Fabrique avec
-  ${document.getElementById('log_used').value}
+  ${document.getElementById('input6').value}
 ## Auteurs
-  ${document.getElementById('made_by').value}
+  ${document.getElementById('input7').value}
 ## Notes de projets
-  ${document.getElementById('project_notes').value}`;
-
-
+  ${document.getElementById('input8').value}`;
   document.getElementById('result').value = tmp;
   document.getElementById('result_html').innerHTML = marked.parse(tmp);
 

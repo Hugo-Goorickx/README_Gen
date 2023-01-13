@@ -9,97 +9,132 @@
     </head>
     <body>
     <script src="./scripts/index.js" type="module"></script>
-
-        <div class="global_form">
-            <div>
-                <div class="input-container">
-                    <textarea type="text" size="50" id="project_name" name="project_name" placeholder=" "></textarea>
-                    <label class="placeholder" for="project_name">Titre du projet</label>
-                </div>
-
-                <div class="image">
-                    <h2>Images:</h2>
-                    <div id="srcs">
-                        <div class="param_img">
-                            <input type="text" class='img_src' id="label" name="label" placeholder=" ">
-                            <img src='' alt="badge" style="display: none;">
-                        </div>
+        <div class="global">
+            <div class="form">
+                <div class="all_inputs">
+                    <div class="global_input">
+                        <span class="title">Titre du projet</span>
+                        <input type="text" class="input" id="input1">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('1')">
+                            <i class="fa fa-bars"></i>
+                        </a>
                     </div>
-                    <button id="gen_imgs">generator badge</button>
-                </div>
-
-                <div class="balise">
-                    <h2>Balises:</h2>
-                    <div id="badges">
-                        <div class="params_badge">
-                            <input type="text" class='label' id="label" name="label" placeholder=" ">
-                            <input type="text" class='Message' id="Message" name="Message" placeholder=" ">
-                            <input type="color" class='color' id="color" name="color" placeholder=" ">
-                            <label for="style">Style</label>
-                            <select class="style_badge" name="style">
-                                <option value="plastic">plastic</option>
-                                <option value="flat">flat</option>
-                                <option value="flat-square">flat-square</option>
-                                <option value="for-the-badge">for-the-badge</option>
-                                <option value="social">social</option>
-                            </select>
-                            <img src='' alt="badge" style="display: none;">
+    
+                    <div class="global_input">
+                        <span class="title">Images</span>
+                        <div id="inputx" class="input">
+                            <div id="srcs">
+                                <div class="param_img">
+                                    <input type="text" class='img_src' id="label" name="label" placeholder=" ">
+                                    <img src='' alt="badge" style="display: none;">
+                                </div>
+                            </div>
+                            <button id="gen_imgs">generator badge</button>
                         </div>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('x')">
+                            <i class="fa fa-bars"></i>
+                        </a>
                     </div>
-                    <button id="gen_badge">generator badge</button>
+    
+                    <div class="global_input">
+                        <span class="title">Balises</span>
+                        <div id="inputy" class="input">
+                            <div id="badges">
+                                <div class="params_badge">
+                                    <input type="text" class='label' id="label" name="label" placeholder=" ">
+                                    <input type="text" class='Message' id="Message" name="Message" placeholder=" ">
+                                    <input type="color" class='color' id="color" name="color" placeholder=" ">
+                                    <label for="style">Style</label>
+                                    <select class="style_badge" name="style">
+                                        <option value="plastic">plastic</option>
+                                        <option value="flat">flat</option>
+                                        <option value="flat-square">flat-square</option>
+                                        <option value="for-the-badge">for-the-badge</option>
+                                        <option value="social">social</option>
+                                    </select>
+                                    <img src='' alt="badge" style="display: none;">
+                                </div>
+                            </div>
+                            <button id="gen_badge">generator badge</button>
+                        </div>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('y')">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+    
+                    <div class="global_input">
+                        <span class="title">Description du projet</span>
+                        <input type="text" class="input" id="input2">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('2')">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+    
+                    <div class="global_input">
+                        <span class="title">Pre-requis</span>
+                        <input type="text" class="input" id="input3">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('3')">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+    
+                    <div class="global_input">
+                        <span class="title">Consignes d'installation</span>
+                        <input type="text" class="input" id="input4">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('4')">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+    
+                    <div class="global_input">
+                        <span class="title">Comment utiliser le projet</span>
+                        <input type="text" class="input" id="input5">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('5')">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+   
+                    <div class="global_input">
+                        <span class="title">Fait avec (logiciels)</span>
+                        <input type="text" class="input" id="input6">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('6')">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+    
+                    <div class="global_input">
+                        <span class="title">Auteur(s)</span>
+                        <input type="text" class="input" id="input7">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('7')">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+ 
+                    <div class="global_input">
+                        <span class="title">Notes de projet</span>
+                        <input type="text" class="input" id="input8">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction('8')">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
                 </div>
-
-                <div class="input-container">
-                    <textarea type="text" size="50" id="project_desc" name="project_desc" placeholder=" "></textarea>
-                    <label class="placeholder" for="project_desc">Description du projet</label>
-                </div>
-
-                <div class="input-container">
-                    <textarea type="text" size="50" id="requis" name="requis" placeholder=" "></textarea>
-                    <label class="placeholder" for="requis">Pre-requis</label>
-                </div>
-
-                <div class="input-container">
-                    <textarea type="text" size="50" id="instruct_install" name="instruct_install" placeholder=" "></textarea>
-                    <label class="placeholder" for="instruct_install">Consignes d'installation</label>
-                </div>
-
-                <div class="input-container">
-                    <textarea type="text" size="50" id="how_to_use" name="how_to_use" placeholder=" "></textarea>
-                    <label class="placeholder" for="how_to_use">Comment utiliser le projet</label>
-                </div>
-
-                <div class="input-container">
-                    <textarea type="text" size="50" id="log_used" name="log_used" placeholder=" "></textarea>
-                    <label class="placeholder" for="log_used">Fait avec (logiciels)</label>
-                </div>
-
-                <div class="input-container">
-                    <textarea type="text" size="50" id="made_by" name="made_by" placeholder=" "></textarea>
-                    <label class="placeholder" for="made_by">Auteur(s)</label>
-                </div>
-
-                <div class="input-container">
-                    <textarea type="text" size="50" id="project_notes" name="project_notes" placeholder=" "></textarea>
-                    <label class="placeholder" for="project_notes">Notes de projet</label>
-                </div>
+                <button id="create_out">Resultat</button>
             </div>
-            <button id="create_out">Resultat</button>
-        </div>
-        <div class="result">
-            <div class="global_result">
+            <div class="result_markdown">
                 <textarea id="result"></textarea>
             </div>
-        </div>
-        <div class="result_html">
-            <div class="global_result_html">
+            <div class="result_html">
                 <div id="result_html"></div>
             </div>
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        console.log(marked.parse('# Marked in browser\n\nRendered by **marked**.'));
+        function myFunction(x)
+        {
+          var x = document.getElementById("input" + x);
+          x.style.display = (x.style.display === "block")? "none":"block";
+        }
     </script>
 </html>
 

@@ -24,10 +24,14 @@ Sans oublier VS Code
 Hugo Goorickx
 
 ## Notes de projets
-Voici la version 0.3 du projet.
+Voici la version 0.4 du projet. 
 Le CSS sera agremente dans les jours a venir.
 Amelioration du rendu en temps reel prevu.
-Reorganisation du formulaire prevu
+L'ajout de checkbox est prevu pour chaque categorie
+
+Version 0.3 du projet. 
+Mise a jour de la charte graphique
+Correction de bugs mineurs
 
 Version 0.2 du projet.
 Ajout d'une photo en description

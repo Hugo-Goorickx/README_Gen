@@ -9,6 +9,112 @@ $font-size: 14pt;
 $font-face: 'Fjalla One';
 $font-color: #2A293E;
 
+
+body
+{
+    margin: 0 0;
+    font-size: 1vw;
+    font-family: $font-face;
+    background-color: #f8f4e5;
+    .global
+    {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-left: 1vh;
+        margin-right: 1vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 3vw;
+        width: 96vw;
+        height: 96vh;
+        .form, .result_markdown, .result_html
+        {
+            overflow: scroll;
+            background-color: grey;
+        }
+        .form
+        {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        .result_markdown
+        {
+            grid-area: 1 / 2 / 2 / 3;
+            #result
+            {
+                background-color: rgb(167, 167, 167);
+                margin-left: 1%;
+                margin-top: 1%;
+                width: 97%;
+                height: 98%;
+            }
+        }
+        .result_html
+        {
+            grid-area: 1 / 3 / 2 / 4;
+            #result_html
+            {
+                background-color: rgb(167, 167, 167);
+                margin-left: 1%;
+                margin-top: 1%;
+                width: 97%;
+                height: 98%;
+            }
+        }
+    }
+}
+
+.all_inputs
+{
+    width: 100%;
+}
+
+.global_input
+{
+    margin-top: 3%;
+    display: block;
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    width: 80%;
+    .input
+    {
+      display: none;
+      width: 100%;
+      min-height: 50px;
+      height: 10%;
+    }
+    a
+    {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+      &.icon
+      {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      &:hover
+      {
+        background-color: #ddd;
+        color: black;
+      }
+    }
+  }
+  
+  
+  
+.title
+{
+    font-size: 2vw;
+    color: white;
+  }
+/*
 body
 {
         display: grid;
@@ -143,28 +249,7 @@ body
             outline: none;
             color: rgba(0,0,0,1);
         }
-        input
-        {
-            display: block;
-            width: 20%;
-            font-size: $font-size;
-            line-height: $font-size * 2;
-            font-family: $font-face;
-            margin-bottom: $font-size * 2;
-            border: none;
-            border-bottom: 5px solid rgba(0,0,0,1);
-            background: $form-bg;
-            min-width: 20px;
-
-            margin-left: 2vw;
-            outline: none;
-            color: rgba(0,0,0,1);
-            &:focus ~ .placeholder,
-            &:not(:placeholder-shown) ~ .placeholder            { transform: translateY(-30px) translateX(10px) scale(0.75); background-color: #f8f4e5; border-radius: 10%;}
-            &:not(:placeholder-shown) ~ .placeholder            { color: #808097; }
-            &:focus ~ .placeholder                              { color: #dc2f55; }
-            &:focus ~ .cut, &:not(:placeholder-shown) ~ .cut    { transform: translateY(8px); }
-        }
+        
     }
     .input-container
     {
@@ -243,4 +328,4 @@ input:-webkit-autofill:focus
     -webkit-text-fill-color: $font-color;
     -webkit-box-shadow: 0 0 0px 1000px $form-bg inset;
     transition: background-color 5000s ease-in-out 0s;
-}
+}*/
